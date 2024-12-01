@@ -10,7 +10,7 @@ class ImageGenerator:
 
         # Load the pre-trained Stable Diffusion model
         self.pipe = StableDiffusionPipeline.from_pretrained(model_name, torch_dtype=torch.float16)
-        self.pipe = self.pipe.to("cuda")
+        #self.pipe = self.pipe.to("cuda")
 
     def generate_image(self, prompt):
         """

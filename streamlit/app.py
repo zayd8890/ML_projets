@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from load_llm import LLMGeneration
 
-from load_gen_img import ImageGenerator
+#from load_gen_img import ImageGenerator
 from huggingface_hub import login
 #import threading
 #import time
@@ -15,12 +15,11 @@ login('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')
 
 input_ = st.text_input("what's your question?")
 # Create an instance of the ImageGenerator class 
-generator = ImageGenerator() 
+#generator = ImageGenerator() 
 gen_text = LLMGeneration()
 
 if input:
     prompt = str(input)  # Ensure the input is a string
-    st.write(generator.generate_image(prompt))  
+    #st.write(generator.generate_image(prompt))  
     st.write(gen_text.generate_response(prompt))
-    st.write(f"Type of input: {type(input_)}")
-    st.write(f"Your input is: {input_}")
+

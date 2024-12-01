@@ -22,7 +22,7 @@ class LLMGeneration:
         :param top_p: The cumulative probability of parameter highest probability tokens to keep for nucleus sampling.
         :return: The generated response as a string.
         """
-        input_ids = self.tokenizer(prompt, return_tensors="pt").input_ids.to(self.device)
+        input_ids = self.tokenizer(prompt, return_tensors="pt")
         outputs = self.model.generate(
             input_ids, 
             max_length=max_length, 

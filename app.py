@@ -67,7 +67,7 @@ def simulate_typing_effect(response):
 
 llm = LLMGeneration()
 
-icon =  r"C:\Users\warag\Downloads\november_projet\morocco_ai_hackaton_2024\MoroccoAI-Hackathon\LO2.png"
+icon =  "LO2.png"
 st.set_page_config(page_title="chicillo" , page_icon=icon,layout='wide')
 # Initialize session state to keep track of the conversation
 if "conversation" not in st.session_state:

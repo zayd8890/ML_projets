@@ -18,8 +18,8 @@ input_ = st.text_input("what's your question?")
 #generator = ImageGenerator() 
 gen_text = LLMGeneration()
 
-if input:
-    prompt = str(input)  # Ensure the input is a string
+if input_:
+    prompt = str(input_)  # Ensure the input is a string
     #st.write(generator.generate_image(prompt))  
     st.write(gen_text.generate_response(prompt))
 

@@ -9,8 +9,8 @@ class LLMGeneration:
         """
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.model = AutoModelForCausalLM.from_pretrained(model_path)
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.model.to(self.device)
+        #self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        #self.model.to(self.device)
 
     def generate_response(self, prompt: str, max_length: int = 50, do_sample: bool = True, top_k: int = 50, top_p: float = 0.95):
         """

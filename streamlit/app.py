@@ -19,7 +19,8 @@ generator = ImageGenerator()
 gen_text = LLMGeneration()
 
 if input:
-    st.write(generator.generate_image(input))  
-    st.write(gen_text.generate_response(input))
+    prompt = str(input)  # Ensure the input is a string
+    st.write(generator.generate_image(prompt))  
+    st.write(gen_text.generate_response(prompt))
     st.write(f"Type of input: {type(input_)}")
     st.write(f"Your input is: {input_}")
